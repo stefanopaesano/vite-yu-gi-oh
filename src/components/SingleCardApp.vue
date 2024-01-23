@@ -19,14 +19,14 @@ export default {
     </div>
 
 
-    <div>
-      <div class="nome">
-      {{ card.name }}
-    </div>
+    <div class="unico">
+        
+          {{ card.name }}
+        
 
-    <div class="type">
-      {{ card.type }}
-    </div>
+       
+          {{ card.type }}
+        
     </div>
     
   </div>
@@ -62,6 +62,14 @@ export default {
             
 }
 
+.unico{
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+
+}
 
 
 </style>

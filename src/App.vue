@@ -9,6 +9,7 @@
   export default {
     data() {
       return {
+        
         store
       }
     },
@@ -17,7 +18,7 @@
       AppMain,
       AppFooter
     },
-    mounted() {
+    created() {
       axios
         .get(this.store.baseUrl)
         .then((response)=> {
@@ -25,7 +26,8 @@
           this.store.cards = response.data.data;
           console.log(this.store.cards)
         })
-    }
+    },
+   
   }
 </script>
 
