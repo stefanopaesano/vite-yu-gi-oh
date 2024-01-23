@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+           
 
         };
     },
@@ -18,6 +19,8 @@ export default {
         <div class="nav-bar">
             <img src="https://th.bing.com/th/id/OIP.FULnK1xNVhH-6cZDRTlTggAAAA?rs=1&pid=ImgDetMain" alt="">
             <h1>yu-gi-oh API</h1>
+
+            <div></div>
 
         </div>
 

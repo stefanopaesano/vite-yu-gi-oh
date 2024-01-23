@@ -1,55 +1,58 @@
 <script>
-export default {
+ import SingleCard from './SingleCardApp.vue';
+ import { store } from '../store.js';
+
+
+  export default {
     data() {
-        return {
-
-        };
+      return {
+        store
+      }
     },
-    methods: {
-
+    components: {
+      SingleCard, 
     }
-}
+  }
 </script>
 
 <template>
 
-    <main>
-
-        <div class="container-fluid">
-            
-
-           <div class="container-small">
-                
-                
-
-
-           </div>
-
-        </div>
+  <div id="main">
+    <div class="dropdown">
+      <a class="btn dropdown-toggle ">
+        Alien
+      </a>
+    </div>
+    <div class="cards-album ">
+      <div class="p-2">
+        Found {{ store.cards.length }} cards
+      </div>
+      <div class="cards-container">
+        <SingleCard :card="card" v-for="(card, index) in store.cards"
+             :key="index" />
         
+      </div>
+    </div>
 
+  </div>
 
-    </main>
-    
+  
 </template>
 
 <style lang="scss" scoped>
-
-.container-fluid{
+#main{
     background-color: orangered;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1200px;
-   
 }
-.container-small{
-        margin: 100px;
-        width: 80%;
-        background-color: aqua;
-        height: 1200px;
+.cards-album{
+    .cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    
 }
-
 
 </style>
